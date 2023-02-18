@@ -21,7 +21,10 @@ public class EnemyAttack : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            PlayerStats.instance.TakeDamage(attackPower);
+            if (PlayerStats.instance.DamageCooldown <= 0)
+            {
+                PlayerStats.instance.TakeDamage(attackPower);
+            }
         }
     }
 

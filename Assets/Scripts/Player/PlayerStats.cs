@@ -22,7 +22,14 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] float damage;
     [SerializeField] float critChange;
     private float recoveryCD = 1;
- 
+
+    [SerializeField] bool isInvulnerable;
+    [SerializeField] float shieldCooldown, shieldMaxCooldown;
+
+
+    [SerializeField] float damageCooldown, maxDamageCooldown;
+
+    [SerializeField] GameObject shield;
 
     public float MaxHp { get => maxHp; set => maxHp = value; }
     public float CurrentHp { get => currentHp; set => currentHp = value; }
@@ -35,6 +42,10 @@ public class PlayerStats : MonoBehaviour
     public float Damage { get => damage; set => damage = value; }
     public float CritChange { get => critChange; set => critChange = value; }
     public float ShootRange { get => shootRange; set => shootRange = value; }
+    public float DamageCooldown { get => damageCooldown; set => damageCooldown = value; }
+    public float MaxDamageCooldown { get => maxDamageCooldown; set => maxDamageCooldown = value; }
+    public float ShieldCooldown { get => shieldCooldown; set => shieldCooldown = value; }
+    public float ShieldMaxCooldown { get => shieldMaxCooldown; set => shieldMaxCooldown = value; }
 
     // Start is called before the first frame update
     private void Awake()
@@ -49,7 +60,8 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        recoveryCD -= Time.deltaTime;
+        recoveryCD -= Time.deltaTime; 
+        damageCooldown -= Time.deltaTime;
         if (recoveryCD < 0)
         {
             RecoverHP(hpRecovery);
@@ -59,17 +71,26 @@ public class PlayerStats : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        CurrentHp -= amount;
-        if (CurrentHp <= 0)
+        if (isInvulnerable)
         {
-            if (Revival > 0)
+            isInvulnerable = false;
+            shield.SetActive(false);
+        }
+        else
+        {
+            CurrentHp -= amount;
+            damageCooldown = maxDamageCooldown;
+            if (CurrentHp <= 0)
             {
-                Revival--;
-                CurrentHp = (float)(MaxHp * 0.25);
-            }
-            else
-            {
-                Die();
+                if (Revival > 0)
+                {
+                    Revival--;
+                    CurrentHp = (float)(MaxHp * 0.25);
+                }
+                else
+                {
+                    Die();
+                }
             }
         }
     }

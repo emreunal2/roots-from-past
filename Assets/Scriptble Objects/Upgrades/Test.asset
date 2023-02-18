@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 834c74d3e476e5f41b8064c7d1e6094f, type: 3}
   m_Name: Test
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: c7b4c974cb9e1b74f975dcce34d77cb1, type: 3}
+  sprite: {fileID: 0}
   upgradeName: Test
-  description: tttt
-  amount: 5
-  stats: 2
+  description: t
+  buffAmount: 100
+  debuffAmount: 80
+  buffStats: 1
+  debuffStats: 3
