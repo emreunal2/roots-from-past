@@ -23,13 +23,9 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] float critChange;
     private float recoveryCD = 1;
 
-    [SerializeField] bool isInvulnerable;
-    [SerializeField] float shieldCooldown, shieldMaxCooldown;
-
-
+    //taking damage cooldown mechanics
     [SerializeField] float damageCooldown, maxDamageCooldown;
 
-    [SerializeField] GameObject shield;
 
     public float MaxHp { get => maxHp; set => maxHp = value; }
     public float CurrentHp { get => currentHp; set => currentHp = value; }
@@ -44,8 +40,6 @@ public class PlayerStats : MonoBehaviour
     public float ShootRange { get => shootRange; set => shootRange = value; }
     public float DamageCooldown { get => damageCooldown; set => damageCooldown = value; }
     public float MaxDamageCooldown { get => maxDamageCooldown; set => maxDamageCooldown = value; }
-    public float ShieldCooldown { get => shieldCooldown; set => shieldCooldown = value; }
-    public float ShieldMaxCooldown { get => shieldMaxCooldown; set => shieldMaxCooldown = value; }
 
     // Start is called before the first frame update
     private void Awake()
@@ -71,10 +65,9 @@ public class PlayerStats : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        if (isInvulnerable)
+        if (FindObjectOfType<PlayerShield>().IsInvulnerable)
         {
-            isInvulnerable = false;
-            shield.SetActive(false);
+            FindObjectOfType<PlayerShield>().DisableShield();
         }
         else
         {

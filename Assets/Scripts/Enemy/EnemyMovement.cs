@@ -21,6 +21,7 @@ public class EnemyMovement : MonoBehaviour
         {
             transform.localScale = new Vector3(-1f, 1, 1);
         }
+        else transform.localScale = Vector3.one;
         transform.position += direction * speed * Time.deltaTime;
     }
 }
