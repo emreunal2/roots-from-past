@@ -25,4 +25,12 @@ public class UpgradeManager : MonoBehaviour
         Debug.Log(UpgradeManager.instance.upgrades.Count);
         return randomNumber;
     }
+
+    public void AddFromList(List<UpgradeBase> upgradesList)
+    {
+        foreach(UpgradeBase i in upgradesList)
+        {
+            upgrades.Add(i);
+        }
+    }
 }

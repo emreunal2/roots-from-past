@@ -7,6 +7,8 @@ public class PlayerShield : MonoBehaviour
     [SerializeField] GameObject shield;
     [SerializeField] bool isInvulnerable;
     [SerializeField] bool isShieldBroken;
+    [SerializeField] ShieldUpgrade firstshieldupgrade;
+    [SerializeField] ShieldUpgrade shieldupgrade;
 
     [SerializeField] float shieldMaxCooldown;
     private float cooldown;
@@ -16,7 +18,8 @@ public class PlayerShield : MonoBehaviour
 
     void Start()
     {
-        
+        firstshieldupgrade.onEvent.AddListener(LowerCooldown);
+        shieldupgrade.onEvent.AddListener(BasicUpgrade);
     }
 
     // Update is called once per frame
@@ -45,5 +48,18 @@ public class PlayerShield : MonoBehaviour
         shield.SetActive(true);
         isInvulnerable = true;
         isShieldBroken = false;
+    }
+
+    public void LowerCooldown() 
+    {
+        ActivateShield();
+        UpgradeManager.instance.upgrades.Remove(firstshieldupgrade);
+        UpgradeManager.instance.AddFromList(firstshieldupgrade.NextUpgrades);
+        firstshieldupgrade.onEvent.RemoveListener(LowerCooldown);
+    }
+
+    public void BasicUpgrade()
+    {
+        ShieldMaxCooldown -= 3;
     }
 }
