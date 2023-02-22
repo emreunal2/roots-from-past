@@ -9,13 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 834c74d3e476e5f41b8064c7d1e6094f, type: 3}
-  m_Name: Revival
+  m_Script: {fileID: 11500000, guid: ef496f1be5a36d548ac200b6092bb3a6, type: 3}
+  m_Name: AOE DMG
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 72e4f1055b48fb042829babe2bc1df6d, type: 3}
-  upgradeName: Toy Emre
-  description: +1 Revive
-  buffAmount: 0
-  debuffAmount: 0
-  buffStats: 5
-  debuffStats: 10
+  sprite: {fileID: 0}
+  upgradeName: DMG
+  description: 
+  isFirstUpgrade: 0
+  addUpgrades: []
+  weapon: {fileID: 0}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  amount: 20

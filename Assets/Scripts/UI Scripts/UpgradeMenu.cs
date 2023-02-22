@@ -8,7 +8,7 @@ public class UpgradeMenu : MonoBehaviour
 {
     [SerializeField] GameObject menu;
     [SerializeField] GameObject mainUI;
-    [SerializeField] TextMeshProUGUI[] nameText, descriptionText;
+    [SerializeField] TextMeshProUGUI[] nameText, descriptionText, debuffDescription;
     [SerializeField] Image[] itemImage;
     [SerializeField] int[] itemIndex;
 
@@ -34,7 +34,9 @@ public class UpgradeMenu : MonoBehaviour
             nameText[i].text = Item.UpgradeName;
             itemImage[i].sprite = Item.Sprite;
             descriptionText[i].text = Item.Description;
+            debuffDescription[i].text = Item.DebuffDescription;
             itemIndex[i] = randomNumber; 
+            
         }
        
     }

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef496f1be5a36d548ac200b6092bb3a6, type: 3}
+  m_Name: AOE First
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 0}
+  upgradeName: AOE First
+  description: testtesttes
+  isFirstUpgrade: 1
+  addUpgrades:
+  - {fileID: 11400000, guid: 7b5a4556d6047914daaa5b7501920492, type: 2}
+  - {fileID: 11400000, guid: 1828f25250c9e3a459972f5b6328a07d, type: 2}
+  weapon: {fileID: 6060018340052110988, guid: f316ecf01baaf004482feb944906f5e5, type: 3}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  amount: 0

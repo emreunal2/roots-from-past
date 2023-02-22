@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AOE Scale
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  upgradeName: 
+  upgradeName: Scale
   description: 
   isFirstUpgrade: 0
   addUpgrades: []
