@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef496f1be5a36d548ac200b6092bb3a6, type: 3}
   m_Name: AOE Scale
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  upgradeName: Scale
-  description: 
+  sprite: {fileID: 21300000, guid: d625587b22dcc824a9a99adeee970348, type: 3}
+  upgradeName: Bigger Tornado
+  description: Tornado Gets Bigger
+  debuffDescription: 
   isFirstUpgrade: 0
   addUpgrades: []
   weapon: {fileID: 0}

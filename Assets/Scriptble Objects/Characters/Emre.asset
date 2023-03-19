@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce187753f1f4e6a4ea527862856403c1, type: 3}
+  m_Name: Emre
+  m_EditorClassIdentifier: 
+  pickSprite: {fileID: 21300000, guid: c7b4c974cb9e1b74f975dcce34d77cb1, type: 3}
+  playerName: Emre
+  maxHp: 100
+  currentHp: 0
+  hpRecovery: 0.2
+  moveSpeed: 5
+  attackSpeed: 10
+  shootRange: 5
+  ammoNumber: 0
+  revival: 0
+  magnet: 2
+  damage: 15
+  weapons:
+  - {fileID: 11400000, guid: 06a159ae1eb434c4d88bdae9db5ef9a5, type: 2}
+  anim: {fileID: 9100000, guid: 10f1f7acc50913a47b245eb93a144b37, type: 2}

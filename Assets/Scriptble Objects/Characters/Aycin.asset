@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce187753f1f4e6a4ea527862856403c1, type: 3}
+  m_Name: Aycin
+  m_EditorClassIdentifier: 
+  pickSprite: {fileID: 21300000, guid: e1de9514cc7c6cb4cbc6db8c04032f30, type: 3}
+  playerName: Aycin
+  maxHp: 90
+  currentHp: 0
+  hpRecovery: 0.2
+  moveSpeed: 5
+  attackSpeed: 10
+  shootRange: 5
+  ammoNumber: 0
+  revival: 0
+  magnet: 1.5
+  damage: 20
+  weapons:
+  - {fileID: 11400000, guid: 2d0a4bc933506ec41965aaa5bb4a74ef, type: 2}
+  anim: {fileID: 9100000, guid: 31f20d7e087623a42852676c21dd5248, type: 2}

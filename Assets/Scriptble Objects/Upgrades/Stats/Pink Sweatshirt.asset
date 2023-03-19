@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 834c74d3e476e5f41b8064c7d1e6094f, type: 3}
   m_Name: Pink Sweatshirt
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  upgradeName: 
-  description: 
-  buffAmount: 0
-  debuffAmount: 0
+  sprite: {fileID: 21300000, guid: b6fdf718e3a0b474c9a2fa678d7e3e4d, type: 3}
+  upgradeName: Pink Sweatshirt
+  description: +15 Max HP
+  debuffDescription: -%20 HP Recovery
+  buffAmount: 15
+  debuffAmount: 20
   buffStats: 0
-  debuffStats: 0
+  debuffStats: 1

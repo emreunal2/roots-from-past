@@ -4,22 +4,32 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour
 {
-    private float moveSpeed = 10f;
+    [SerializeField] float moveSpeed;
     [SerializeField] float dmg;
+    [SerializeField] float baseDamage;
+    private Rigidbody2D rb;
 
     public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
 
     // Start is called before the first frame update
     void Start()
     {
-        damageUpdate();
+        rb = GetComponent<Rigidbody2D>();
+        DamageUpdate();
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (rb.velocity.x < 0)
+        {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+        }
+        else if (rb.velocity.x > 0)
+        {
+            transform.localScale = Vector3.one;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -27,16 +37,19 @@ public class BulletController : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             collision.GetComponent<EnemyHp>().TakeDamage(dmg);
-            collision.GetComponent<SpriteRenderer>().color = Color.red;
             Destroy(gameObject);
-            collision.GetComponent<EnemyMovement>().Speed += 2;
+            collision.GetComponent<EnemyMovement>().Speed += 1.5f;
         }
     }
 
-    public void damageUpdate()
+    public void DamageUpdate()
     {
-        dmg = PlayerStats.instance.Damage;
+        dmg = PlayerStats.instance.Damage * baseDamage;
     }
 
+    void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
 
 }

@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef496f1be5a36d548ac200b6092bb3a6, type: 3}
   m_Name: AOE First
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  upgradeName: AOE First
-  description: testtesttes
+  sprite: {fileID: 21300000, guid: 0b06fbe99d8a9e7469062338b640fe0e, type: 3}
+  upgradeName: Tornado
+  description: 'Creates An Damage Circle '
+  debuffDescription: 
   isFirstUpgrade: 1
   addUpgrades:
   - {fileID: 11400000, guid: 7b5a4556d6047914daaa5b7501920492, type: 2}

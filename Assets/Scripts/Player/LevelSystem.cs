@@ -28,7 +28,7 @@ public class LevelSystem : MonoBehaviour
         neededXP[1] = baseNeededXP;
         for (int i = 2; i < neededXP.Length; i++)
         {
-            neededXP[i] = (int)(0.02f * i * i * i + 3.06f * i * i + 105.6f * i);
+            neededXP[i] = (int)(0.02f * i * i * i + 3.06f * i * i + 105.6f * i/2);
         }
     }
 

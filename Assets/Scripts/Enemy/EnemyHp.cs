@@ -23,6 +23,7 @@ public class EnemyHp : MonoBehaviour
     public void TakeDamage(float amount)
     {
         Hp -= amount;
+        GetComponent<SpriteRenderer>().color = Color.red;
         if (hp <= 0)
         {
             AudioManager.instance.PlaySFX(1);

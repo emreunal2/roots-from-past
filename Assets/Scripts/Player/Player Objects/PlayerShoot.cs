@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
-    public static PlayerShoot instance;
+    //public static PlayerShoot instance;
     public Transform[] enemies;
     public GameObject projectile;
     public float shootDelay;
@@ -14,13 +14,15 @@ public class PlayerShoot : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        //instance = this;
         shootTimer = shootDelay;
+        
     }
 
     private void Start()
     {
         UpdateShootStats();
+        UpgradeManager.instance.OnPick.AddListener(UpdateShootStats);
     }
 
     private void Update()

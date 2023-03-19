@@ -20,7 +20,6 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] float magnet;
 
     [SerializeField] float damage;
-    [SerializeField] float critChange;
     private float recoveryCD = 1;
 
     //taking damage cooldown mechanics
@@ -36,7 +35,6 @@ public class PlayerStats : MonoBehaviour
     public float Revival { get => revival; set => revival = value; }
     public float Magnet { get => magnet; set => magnet = value; }
     public float Damage { get => damage; set => damage = value; }
-    public float CritChange { get => critChange; set => critChange = value; }
     public float ShootRange { get => shootRange; set => shootRange = value; }
     public float DamageCooldown { get => damageCooldown; set => damageCooldown = value; }
     public float MaxDamageCooldown { get => maxDamageCooldown; set => maxDamageCooldown = value; }

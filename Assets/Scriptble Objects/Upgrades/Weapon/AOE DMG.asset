@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef496f1be5a36d548ac200b6092bb3a6, type: 3}
   m_Name: AOE DMG
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  upgradeName: DMG
-  description: 
+  sprite: {fileID: 21300000, guid: df47eb178c88a4144b50cfe30212780a, type: 3}
+  upgradeName: Faster Tornado
+  description: Your Tornado deals more damage
+  debuffDescription: 
   isFirstUpgrade: 0
   addUpgrades: []
   weapon: {fileID: 0}

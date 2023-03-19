@@ -37,7 +37,7 @@ public class StatUpgrade : UpgradeBase
                 PlayerStats.instance.Magnet+= PlayerStats.instance.Magnet* buffAmount / 100;
                 break;
             case Stats.Damage:
-                PlayerStats.instance.Damage+= PlayerStats.instance.Magnet * buffAmount / 100;
+                PlayerStats.instance.Damage+= PlayerStats.instance.Damage * buffAmount / 100;
                 break;
             case Stats.ShootRange:
                 PlayerStats.instance.ShootRange += PlayerStats.instance.ShootRange * buffAmount / 100;
@@ -70,7 +70,7 @@ public class StatUpgrade : UpgradeBase
                 PlayerStats.instance.Magnet -= PlayerStats.instance.Magnet * debuffAmount / 100;
                 break;
             case Stats.Damage:
-                PlayerStats.instance.Damage -= PlayerStats.instance.Magnet * debuffAmount / 100;
+                PlayerStats.instance.Damage -= PlayerStats.instance.Damage * debuffAmount / 100;
                 break;
             case Stats.ShootRange:
                 PlayerStats.instance.ShootRange -= PlayerStats.instance.ShootRange * debuffAmount / 100;

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 834c74d3e476e5f41b8064c7d1e6094f, type: 3}
   m_Name: Backpack
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 111c5109106c2b54690551b8a9e732d0, type: 3}
   upgradeName: Bagpack
   description: +%25 pickup range
   debuffDescription: -%20 movespeed
